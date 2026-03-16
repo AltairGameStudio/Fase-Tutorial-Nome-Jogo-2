@@ -1,3 +1,47 @@
-[gd_scene format=3 uid="uid://8ywinkayvs4m"]
+[gd_scene load_steps=4 format=3 uid="uid://8ywinkayvs4m"]
 
-[node name="MainLevel" type="Node2D"]
+[ext_resource type="PackedScene" uid="uid://gquhiq2rxcqg" path="res://Scenes/World/game_area.tscn" id="1_jhkjf"]
+[ext_resource type="PackedScene" uid="uid://dpc7eb0ardvw2" path="res://Scenes/UI/shop_alien_area.tscn" id="2_s2sig"]
+[ext_resource type="PackedScene" uid="uid://c7efonthk4mum" path="res://Scenes/UI/stats_and_upgrades_area.tscn" id="3_pp4qn"]
+
+[node name="MainLevel" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 320.0
+offset_bottom = 240.0
+
+[node name="UI" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 4.0
+offset_bottom = 4.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameWrapper" type="PanelContainer" parent="UI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="GameArea" parent="UI/GameWrapper" instance=ExtResource("1_jhkjf")]
+layout_mode = 2
+
+[node name="RightUI" type="VBoxContainer" parent="UI"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="ShopArea" type="PanelContainer" parent="UI/RightUI"]
+layout_mode = 2
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.5
+
+[node name="ShopAlienArea" parent="UI/RightUI/ShopArea" instance=ExtResource("2_s2sig")]
+layout_mode = 2
+
+[node name="StatsAndUpgrades" type="PanelContainer" parent="UI/RightUI"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" instance=ExtResource("3_pp4qn")]
+layout_mode = 2
