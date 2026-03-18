@@ -34,7 +34,7 @@ size_flags_horizontal = 3
 [node name="ShopArea" type="PanelContainer" parent="UI/RightUI"]
 layout_mode = 2
 size_flags_vertical = 3
-size_flags_stretch_ratio = 0.5
+size_flags_stretch_ratio = 104.0
 
 [node name="ShopAlienArea" parent="UI/RightUI/ShopArea" instance=ExtResource("2_s2sig")]
 layout_mode = 2
@@ -42,6 +42,7 @@ layout_mode = 2
 [node name="StatsAndUpgrades" type="PanelContainer" parent="UI/RightUI"]
 layout_mode = 2
 size_flags_vertical = 3
+size_flags_stretch_ratio = 136.0
 
 [node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" instance=ExtResource("3_pp4qn")]
 layout_mode = 2

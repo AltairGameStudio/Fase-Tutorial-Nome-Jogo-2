@@ -1,16 +1,75 @@
-[gd_scene format=3 uid="uid://dpc7eb0ardvw2"]
+[gd_scene load_steps=3 format=3 uid="uid://dpc7eb0ardvw2"]
+
+[ext_resource type="Texture2D" uid="uid://com4b134lfq4x" path="res://Assets/Sprites/Background/shop_background.png" id="1_7uvda"]
+[ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="2_r3bon"]
 
 [node name="ShopAlienArea" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+offset_right = 152.0
+offset_bottom = 104.0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color(0.696791, 0.293426, 0.304104, 1)
+texture = ExtResource("1_7uvda")
+
+[node name="SlotsContainer" type="GridContainer" parent="TextureRect"]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 144.0
+offset_bottom = 44.0
+columns = 5
+
+[node name="Slot" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot2" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot3" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot4" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot5" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot6" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot7" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+
+[node name="Slot8" type="TextureButton" parent="TextureRect/SlotsContainer"]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")

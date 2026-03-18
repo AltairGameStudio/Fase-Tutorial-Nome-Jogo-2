@@ -1,7 +1,6 @@
 extends Node
 
 ## GERENCIADOR DE ESTADO DA PARTIDA
-
 var current_energy: int = 10
 var current_wave: int = 1
 
