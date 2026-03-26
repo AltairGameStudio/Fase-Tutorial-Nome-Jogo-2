@@ -1,0 +1,215 @@
+[gd_scene format=3 uid="uid://dpc7eb0ardvw2"]
+
+[ext_resource type="Texture2D" uid="uid://com4b134lfq4x" path="res://Assets/Sprites/Background/shop_background.png" id="1_7uvda"]
+[ext_resource type="Script" uid="uid://bxwp88huteu" path="res://Scripts/UI/gridShop.gd" id="2_2js01"]
+[ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="2_r3bon"]
+[ext_resource type="Script" uid="uid://c0k36obshenoh" path="res://Scripts/UI/shop_slot.gd" id="3_xs63k"]
+[ext_resource type="Script" uid="uid://bl2a1q7vgx44n" path="res://Scripts/Entities/alien_shop.gd" id="5_7ff05"]
+[ext_resource type="Texture2D" uid="uid://dveccclitusxl" path="res://Assets/Sprites/Aliens/alien_1.png" id="6_my50m"]
+[ext_resource type="Texture2D" uid="uid://bwahsvpucy4pw" path="res://Assets/Sprites/Aliens/alien1.png" id="7_0hbgf"]
+[ext_resource type="Texture2D" uid="uid://h6cfepfba28n" path="res://Assets/Sprites/Aliens/alien2.png" id="8_4i8f1"]
+
+[node name="ShopAlienArea" type="Control" unique_id=963115639]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 152.0
+offset_bottom = 104.0
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=785228638]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_7uvda")
+
+[node name="SlotsContainer" type="GridContainer" parent="." unique_id=245393049]
+layout_mode = 1
+offset_left = 8.0
+offset_top = 20.0
+offset_right = 144.0
+offset_bottom = 72.0
+columns = 5
+script = ExtResource("2_2js01")
+
+[node name="Slot" type="TextureButton" parent="SlotsContainer" unique_id=1175966969]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot" unique_id=508149411]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="TextureRect" type="TextureRect" parent="SlotsContainer/Slot/Control" unique_id=2133320845]
+layout_mode = 1
+anchors_preset = -1
+offset_right = 15.0
+offset_bottom = 16.0
+texture = ExtResource("6_my50m")
+expand_mode = 1
+
+[node name="Slot2" type="TextureButton" parent="SlotsContainer" unique_id=703861232]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot2" unique_id=952937784]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="TextureRect" type="TextureRect" parent="SlotsContainer/Slot2/Control" unique_id=1787760477]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 15.0
+texture = ExtResource("7_0hbgf")
+expand_mode = 1
+
+[node name="Slot3" type="TextureButton" parent="SlotsContainer" unique_id=189651078]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot3" unique_id=1591905004]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="TextureRect" type="TextureRect" parent="SlotsContainer/Slot3/Control" unique_id=877536526]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 15.0
+texture = ExtResource("8_4i8f1")
+expand_mode = 1
+
+[node name="Slot4" type="TextureButton" parent="SlotsContainer" unique_id=1599083727]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot4" unique_id=1989182083]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="TextureRect" type="TextureRect" parent="SlotsContainer/Slot4/Control" unique_id=720137087]
+layout_mode = 0
+offset_right = 15.0
+offset_bottom = 16.0
+texture = ExtResource("6_my50m")
+expand_mode = 1
+
+[node name="Slot5" type="TextureButton" parent="SlotsContainer" unique_id=246623093]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot5" unique_id=925974028]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="Slot6" type="TextureButton" parent="SlotsContainer" unique_id=129046397]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot6" unique_id=5814009]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="Slot7" type="TextureButton" parent="SlotsContainer" unique_id=1581520597]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot7" unique_id=1870113313]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")
+
+[node name="Slot8" type="TextureButton" parent="SlotsContainer" unique_id=1962543357]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("2_r3bon")
+script = ExtResource("3_xs63k")
+
+[node name="Control" type="Control" parent="SlotsContainer/Slot8" unique_id=1362143895]
+layout_mode = 1
+anchor_left = 0.208
+anchor_top = 0.208
+anchor_right = 0.208
+anchor_bottom = 0.208
+offset_left = 0.007999897
+offset_top = -0.9920001
+offset_right = 15.007999
+offset_bottom = 15.007999
+script = ExtResource("5_7ff05")

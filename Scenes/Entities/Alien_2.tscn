@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://nm4g10mpd1vu"]
+
+[ext_resource type="PackedScene" uid="uid://r6xgni7bsbpx" path="res://Scenes/Entities/Alien_base.tscn" id="1_j1bm6"]
+[ext_resource type="Script" uid="uid://c2opf1ktsgcq2" path="res://Scripts/Entities/Alien2.gd" id="2_rgy7g"]
+[ext_resource type="Texture2D" uid="uid://bwahsvpucy4pw" path="res://Assets/Sprites/Aliens/alien2.png" id="3_k2icb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_p8q13"]
+size = Vector2(14, 12)
+
+[node name="Alien2" unique_id=50909793 instance=ExtResource("1_j1bm6")]
+script = ExtResource("2_rgy7g")
+
+[node name="Alien1" type="Sprite2D" parent="." index="0" unique_id=537248426]
+position = Vector2(0, -9.536743e-07)
+scale = Vector2(0.023846127, 0.026153848)
+texture = ExtResource("3_k2icb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(933336974) index="0" unique_id=1464384413]
+shape = SubResource("RectangleShape2D_p8q13")
