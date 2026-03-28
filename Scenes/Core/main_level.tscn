@@ -1,5 +1,4 @@
 [gd_scene format=3 uid="uid://8ywinkayvs4m"]
-[gd_scene format=3 uid="uid://8ywinkayvs4m"]
 
 [ext_resource type="PackedScene" uid="uid://gquhiq2rxcqg" path="res://Scenes/World/game_area.tscn" id="1_jhkjf"]
 [ext_resource type="PackedScene" uid="uid://b4xc1fcbyamth" path="res://Scenes/Entities/enemy_ship.tscn" id="2_pp4qn"]

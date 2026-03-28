@@ -9,8 +9,8 @@ script = ExtResource("1_b0258")
 [node name="Sprite2D" type="TextureRect" parent="." unique_id=1264451042]
 offset_left = -1.0
 offset_top = -1.0
-offset_right = 199999.02
-offset_bottom = 199999.0
+offset_right = 399999.03
+offset_bottom = 399999.03
 scale = Vector2(1e-05, 1e-05)
 size_flags_horizontal = 4
 size_flags_vertical = 4

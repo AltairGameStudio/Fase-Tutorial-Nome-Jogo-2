@@ -1,7 +1,7 @@
 extends Node2D
 
 var bullet_velocity= Vector2.ZERO
-@export var bullet_speed=3
+@export var bullet_speed=50
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

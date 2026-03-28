@@ -12,7 +12,7 @@ var podeatirar= true
 
 # valor placeholder
 @export var bullet_damage = 10
-@export var bullet_speed = 2
+@export var bullet_speed = 50
 
 func _ready() -> void:
 	current_health = max_health
@@ -20,8 +20,8 @@ func _ready() -> void:
 ## Lógica de movimentação lateral automática
 func _physics_process(delta: float) -> void:
 	#vai pro canto e volta pro outro
-	if position.x>150: movement_speed= -3
-	if position.x<0: movement_speed= 3
+	if position.x>110: movement_speed= -2
+	if position.x<0: movement_speed= 2
 	position.x += movement_speed+delta
 
 ## Processa o dano recebido pelos ataques dos aliens
@@ -35,11 +35,11 @@ func _process(_delta):
 	if podeatirar:
 		shoot()
 		podeatirar = false
-		await get_tree().create_timer(tiro_cooldown).timeout 
+		await get_tree().create_timer(tiro_cooldown + randf() * 2).timeout 
 		podeatirar = true
 
 func shoot():
 	#fazer tiro spawnar
 	var bullet = bullet_scene.instantiate()
 	get_parent().add_child(bullet)
-	bullet.position = position 
+	bullet.position = position + Vector2(25, 10)
