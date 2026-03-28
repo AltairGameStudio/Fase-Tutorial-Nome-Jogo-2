@@ -24,7 +24,6 @@ texture = ExtResource("1_rfc8p")
 flip_v = true
 
 [node name="SlotsContainer" type="GridContainer" parent="TextureRect"]
-layout_mode = 0
 offset_left = 8.0
 offset_top = 20.0
 offset_right = 144.0
