@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://be7vh5kmgnpag"]
+
+[ext_resource type="PackedScene" uid="uid://dd55aeq3usc2w" path="res://Scenes/UI/Upgrade_base.tscn" id="1_ui2o6"]
+[ext_resource type="Script" uid="uid://640j7xc6mc3g" path="res://Scripts/UI/Upgrade2.gd" id="2_gd4fh"]
+[ext_resource type="Texture2D" uid="uid://by0nhga3qlw5c" path="res://Assets/Sprites/Upgrades/raio.png" id="2_xnofg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xnofg"]
+size = Vector2(10, 16)
+
+[node name="Upgrade2" unique_id=939824228 instance=ExtResource("1_ui2o6")]
+script = ExtResource("2_gd4fh")
+
+[node name="Raio" type="Sprite2D" parent="." index="0" unique_id=212282856]
+scale = Vector2(0.06388889, 0.06527778)
+texture = ExtResource("2_xnofg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1359505252) index="0" unique_id=373717523]
+shape = SubResource("RectangleShape2D_xnofg")

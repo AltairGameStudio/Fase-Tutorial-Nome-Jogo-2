@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://l00fdrimq6kt"]
+
+[ext_resource type="PackedScene" uid="uid://r6xgni7bsbpx" path="res://Scenes/Entities/Alien_base.tscn" id="1_7p60w"]
+[ext_resource type="Script" uid="uid://b8tkr6a0p8ugt" path="res://Scripts/Entities/Alien5.gd" id="2_4amto"]
+
+[sub_resource type="Gradient" id="Gradient_bic2p"]
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ou3pq"]
+gradient = SubResource("Gradient_bic2p")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ou3pq"]
+
+[node name="Alien5" unique_id=166285613 instance=ExtResource("1_7p60w")]
+script = ExtResource("2_4amto")
+
+[node name="Alien4" type="Sprite2D" parent="." index="0" unique_id=814203879]
+position = Vector2(9.536743e-07, 9.536743e-07)
+scale = Vector2(0.3125, 0.3125)
+texture = SubResource("GradientTexture2D_ou3pq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(933336974) index="0" unique_id=2134109050]
+shape = SubResource("RectangleShape2D_ou3pq")

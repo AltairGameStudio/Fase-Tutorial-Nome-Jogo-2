@@ -1,8 +1,10 @@
-[gd_scene load_steps=64 format=3 uid="uid://gquhiq2rxcqg"]
+[gd_scene format=3 uid="uid://gquhiq2rxcqg"]
 
 [ext_resource type="Texture2D" uid="uid://btjsnsf6whgox" path="res://Assets/Sprites/Background/space_background.png" id="1_suill"]
 [ext_resource type="Texture2D" uid="uid://dxv0pfmmf31yl" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-0.png" id="2_0h7yq"]
 [ext_resource type="Texture2D" uid="uid://r3bb3v3caui1" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-1.png" id="3_nlim5"]
+[ext_resource type="Script" uid="uid://bwrsv5vuffpop" path="res://Scripts/World/game_slot.gd" id="3_w2bcp"]
+[ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="3_wrfqa"]
 [ext_resource type="Texture2D" uid="uid://bq4xti07j5vlw" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-2.png" id="4_cajti"]
 [ext_resource type="Texture2D" uid="uid://duo5pp7l81naq" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-3.png" id="5_w2bcp"]
 [ext_resource type="Texture2D" uid="uid://c0qg3kkfls50e" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-4.png" id="6_wrfqa"]
@@ -258,32 +260,299 @@ animations = [{
 "speed": 5.0
 }]
 
-[node name="GameArea" type="Control"]
+[node name="GameArea" type="Control" unique_id=1092606296]
 clip_contents = true
 layout_mode = 3
 anchors_preset = 0
 offset_right = 160.0
 offset_bottom = 240.0
+mouse_filter = 2
 
-[node name="Background" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="." unique_id=1174049670]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_suill")
 expand_mode = 4
 
-[node name="TileMapLayer" type="TileMapLayer" parent="Background"]
+[node name="GridContainer" type="GridContainer" parent="Background" unique_id=1573858999]
+layout_mode = 0
+offset_left = 11.0
+offset_top = 15.0
+offset_right = 150.0
+offset_bottom = 128.0
+mouse_filter = 2
+columns = 5
 
-[node name="Moon" type="AnimatedSprite2D" parent="."]
+[node name="Slot1" type="TextureButton" parent="Background/GridContainer" unique_id=1768418862]
+layout_mode = 2
+texture_normal = ExtResource("3_wrfqa")
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot1" unique_id=983772449]
+auto_translate_mode = 2
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot2" type="TextureButton" parent="Background/GridContainer" unique_id=196709904]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot2" unique_id=813971199]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot3" type="TextureButton" parent="Background/GridContainer" unique_id=156951514]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot3" unique_id=1916827249]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot4" type="TextureButton" parent="Background/GridContainer" unique_id=958519668]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot4" unique_id=269182939]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot5" type="TextureButton" parent="Background/GridContainer" unique_id=1469497953]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot5" unique_id=1211828807]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot6" type="TextureButton" parent="Background/GridContainer" unique_id=1690920090]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot6" unique_id=392587595]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot7" type="TextureButton" parent="Background/GridContainer" unique_id=1640586462]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot7" unique_id=1837468323]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot8" type="TextureButton" parent="Background/GridContainer" unique_id=349998831]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot8" unique_id=1185064447]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot9" type="TextureButton" parent="Background/GridContainer" unique_id=1212981433]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot9" unique_id=1402793542]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot10" type="TextureButton" parent="Background/GridContainer" unique_id=1810329035]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Control" type="Control" parent="Background/GridContainer/Slot10" unique_id=2015321806]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot11" type="TextureButton" parent="Background/GridContainer" unique_id=20928270]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot11" unique_id=504333328]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot12" type="TextureButton" parent="Background/GridContainer" unique_id=902595943]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot12" unique_id=2024538133]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot13" type="TextureButton" parent="Background/GridContainer" unique_id=2003557300]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot13" unique_id=330877172]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot14" type="TextureButton" parent="Background/GridContainer" unique_id=175278219]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot14" unique_id=1001735290]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot15" type="TextureButton" parent="Background/GridContainer" unique_id=1721500022]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot15" unique_id=1704746820]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot16" type="TextureButton" parent="Background/GridContainer" unique_id=987769321]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot16" unique_id=166226140]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot17" type="TextureButton" parent="Background/GridContainer" unique_id=1799759901]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot17" unique_id=44387463]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot18" type="TextureButton" parent="Background/GridContainer" unique_id=2104535663]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot18" unique_id=2091747277]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot19" type="TextureButton" parent="Background/GridContainer" unique_id=1593863]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot19" unique_id=1851329623]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Slot20" type="TextureButton" parent="Background/GridContainer" unique_id=1363878991]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+button_mask = 0
+texture_normal = ExtResource("3_wrfqa")
+ignore_texture_size = true
+
+[node name="Game_slot" type="Control" parent="Background/GridContainer/Slot20" unique_id=2031004102]
+anchors_preset = 0
+offset_right = 24.0
+offset_bottom = 24.0
+script = ExtResource("3_w2bcp")
+
+[node name="Moon" type="AnimatedSprite2D" parent="." unique_id=286742841]
 position = Vector2(80, 0)
 sprite_frames = SubResource("SpriteFrames_7nabp")
 animation = &"moon"
 autoplay = "moon"
 
-[node name="Earth" type="AnimatedSprite2D" parent="."]
+[node name="Earth" type="AnimatedSprite2D" parent="." unique_id=868291776]
 position = Vector2(80, 240)
 sprite_frames = SubResource("SpriteFrames_4dmu0")
 autoplay = "default"

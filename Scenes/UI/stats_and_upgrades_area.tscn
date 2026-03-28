@@ -1,15 +1,18 @@
-[gd_scene load_steps=3 format=3 uid="uid://c7efonthk4mum"]
+[gd_scene format=3 uid="uid://c7efonthk4mum"]
 
 [ext_resource type="Texture2D" uid="uid://ctwd3wetay0em" path="res://Assets/Sprites/Background/stats_upgrades_background.png" id="1_rfc8p"]
 [ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="2_gj5b4"]
+[ext_resource type="PackedScene" uid="uid://dpsvu4jj0feg6" path="res://Scenes/UI/Upgrade_1.tscn" id="3_n7gu6"]
+[ext_resource type="PackedScene" uid="uid://be7vh5kmgnpag" path="res://Scenes/UI/Upgrade_2.tscn" id="4_6kurd"]
 
-[node name="StatsAndUpgradesArea" type="Control"]
+[node name="StatsAndUpgradesArea" type="Control" unique_id=2040743486]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 152.0
 offset_bottom = 136.0
+mouse_filter = 2
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1358632685]
 modulate = Color(0.632145, 0, 0.158507, 1)
 self_modulate = Color(0.581126, 1, 0.908312, 1)
 light_mask = 5
@@ -20,84 +23,113 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 texture = ExtResource("1_rfc8p")
 flip_v = true
 
-[node name="SlotsContainer" type="GridContainer" parent="TextureRect"]
+[node name="SlotsContainer" type="GridContainer" parent="TextureRect" unique_id=31869341]
+layout_mode = 0
 offset_left = 8.0
 offset_top = 20.0
 offset_right = 144.0
 offset_bottom = 44.0
+mouse_filter = 2
 columns = 5
 
-[node name="Slot" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=479616949]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot2" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Upgrade1" parent="TextureRect/SlotsContainer/Slot" unique_id=939824228 instance=ExtResource("3_n7gu6")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 12.0
+
+[node name="Slot2" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1755745652]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot3" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Upgrade2" parent="TextureRect/SlotsContainer/Slot2" unique_id=251461460 instance=ExtResource("4_6kurd")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 12.0
+
+[node name="Slot3" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=855083049]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot4" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot4" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1879447738]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot5" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot5" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=287917975]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot6" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot6" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1279285028]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot7" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot7" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=969574315]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot8" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot8" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=161940554]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot9" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot9" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1970899363]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot10" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot10" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=306457756]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot11" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot11" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1835947626]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Slot12" type="TextureButton" parent="TextureRect/SlotsContainer"]
+[node name="Slot12" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=546621945]
 custom_minimum_size = Vector2(24, 24)
 layout_mode = 2
+mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
