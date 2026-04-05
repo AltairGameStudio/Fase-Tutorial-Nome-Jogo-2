@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://btjsnsf6whgox" path="res://Assets/Sprites/Background/space_background.png" id="1_suill"]
 [ext_resource type="Texture2D" uid="uid://dxv0pfmmf31yl" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-0.png" id="2_0h7yq"]
 [ext_resource type="Texture2D" uid="uid://r3bb3v3caui1" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-1.png" id="3_nlim5"]
-[ext_resource type="Script" path="res://Scripts/World/game_slot.gd" id="3_w2bcp"]
+[ext_resource type="Script" uid="uid://bwrsv5vuffpop" path="res://Scripts/World/GameSlot.gd" id="3_w2bcp"]
 [ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="3_wrfqa"]
 [ext_resource type="Texture2D" uid="uid://bq4xti07j5vlw" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-2.png" id="4_cajti"]
 [ext_resource type="Texture2D" uid="uid://duo5pp7l81naq" path="res://Assets/Sprites/Moon/36d74e88c14d4ec4f9ebf135b765e81a30g6mCRcPBN9LQU7-3.png" id="5_w2bcp"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://r6xgni7bsbpx"]
+
+[ext_resource type="Script" uid="uid://cc68ueb4jek1d" path="res://Scripts/Entities/Aliens/AlienBase.gd" id="1_e051k"]
+
+[node name="AlienBase" type="Control" unique_id=166285613]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_e051k")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=933336974]
+collision_layer = 2
+collision_mask = 0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=612958574]
+
+[connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]

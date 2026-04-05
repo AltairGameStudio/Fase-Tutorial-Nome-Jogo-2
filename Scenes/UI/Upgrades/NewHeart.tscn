@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bkxwv7ibbvv0y"]
+
+[ext_resource type="PackedScene" uid="uid://dpsvu4jj0feg6" path="res://Scenes/UI/Upgrades/LifePotion.tscn" id="1_73jlq"]
+[ext_resource type="Texture2D" uid="uid://oglpuei5fow6" path="res://Assets/Sprites/Upgrades/NewHeart.png" id="2_54tip"]
+
+[node name="Upgrade1" unique_id=939824228 instance=ExtResource("1_73jlq")]
+
+[node name="Heart" parent="." index="0" unique_id=226125794]
+scale = Vector2(0.02, 0.02)
+texture = ExtResource("2_54tip")

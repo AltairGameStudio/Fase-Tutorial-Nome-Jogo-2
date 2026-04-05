@@ -32,3 +32,10 @@ window/size/resizable=false
 window/size/window_width_override=1280
 window/size/window_height_override=960
 window/stretch/scale=4.0
+
+[layer_names]
+
+2d_physics/layer_1="EnemyShip"
+2d_physics/layer_2="Aliens"
+2d_physics/layer_3="EnemyBullet"
+2d_physics/layer_4="AlienBullet"

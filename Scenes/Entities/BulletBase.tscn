@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c3l3un2bmhlio"]
+
+[ext_resource type="Script" uid="uid://dikp0u4i2a56" path="res://Scripts/Entities/Bullet.gd" id="1_k5b1m"]
+[ext_resource type="Texture2D" uid="uid://cvjuqor8k02yy" path="res://Assets/Sprites/Venus/a924b179cf244c83be39ba079a9285a6MNx7XaYc8SkTFnRx-1.png" id="2_1fahf"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_k5b1m"]
+size = Vector2(4, 4)
+
+[node name="Bullet" type="Area2D" unique_id=254723802]
+script = ExtResource("1_k5b1m")
+
+[node name="Sprite2D" type="TextureRect" parent="." unique_id=1264451042]
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 399999.03
+offset_bottom = 399999.03
+scale = Vector2(1e-05, 1e-05)
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_1fahf")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=20962248]
+position = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_k5b1m")

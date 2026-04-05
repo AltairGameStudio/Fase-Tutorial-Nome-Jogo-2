@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dpsvu4jj0feg6"]
+
+[ext_resource type="PackedScene" uid="uid://dd55aeq3usc2w" path="res://Scenes/UI/Upgrades/UpgradeBase.tscn" id="1_kijey"]
+[ext_resource type="Script" uid="uid://tt0njdyxwg2h" path="res://Scripts/UI/Upgrades/BubbleShield.gd" id="2_ienfb"]
+[ext_resource type="Texture2D" uid="uid://cx80224omhue1" path="res://Assets/Sprites/Upgrades/LifePotion.png" id="3_hd62w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ienfb"]
+size = Vector2(16, 12)
+
+[node name="Upgrade1" unique_id=939824228 instance=ExtResource("1_kijey")]
+script = ExtResource("2_ienfb")
+
+[node name="Heart" type="Sprite2D" parent="." index="0" unique_id=226125794]
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("3_hd62w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1359505252) index="0" unique_id=1002197295]
+shape = SubResource("RectangleShape2D_ienfb")

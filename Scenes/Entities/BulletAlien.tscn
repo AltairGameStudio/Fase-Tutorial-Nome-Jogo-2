@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://uw16kcmjh7mq"]
+
+[ext_resource type="PackedScene" uid="uid://c3l3un2bmhlio" path="res://Scenes/Entities/BulletBase.tscn" id="1_wkga2"]
+
+[node name="Bullet" unique_id=254723802 instance=ExtResource("1_wkga2")]
+collision_layer = 8

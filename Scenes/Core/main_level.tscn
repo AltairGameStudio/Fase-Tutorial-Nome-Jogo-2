@@ -1,35 +1,8 @@
 [gd_scene format=3 uid="uid://8ywinkayvs4m"]
 
 [ext_resource type="PackedScene" uid="uid://gquhiq2rxcqg" path="res://Scenes/World/game_area.tscn" id="1_jhkjf"]
-[ext_resource type="PackedScene" uid="uid://b4xc1fcbyamth" path="res://Scenes/Entities/enemy_ship.tscn" id="2_pp4qn"]
-[ext_resource type="PackedScene" uid="uid://dpc7eb0ardvw2" path="res://Scenes/UI/shop_alien_area.tscn" id="2_s2sig"]
-[ext_resource type="PackedScene" uid="uid://c7efonthk4mum" path="res://Scenes/UI/stats_and_upgrades_area.tscn" id="3_pp4qn"]
-
-[sub_resource type="GDScript" id="GDScript_pp4qn"]
-script/source = "# Called when the node enters the scene tree for the first time.
-extends Node2D
-var tempo = 0
-var velocidade = 250
-
-func _process(delta:float) -> void:
-	pass  
-	# andar e quando chega num canto vai pro outro lado
-	if position.x>150: velocidade= -80
-	if position.x<0: velocidade= 80
-	
-	tempo += delta
-
-	
-
-
-	
-
-func _ready() -> void:
-	pass # Replace with function body.
-	
-	
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-"
+[ext_resource type="PackedScene" uid="uid://dpc7eb0ardvw2" path="res://Scenes/UI/ShopAlienArea.tscn" id="2_s2sig"]
+[ext_resource type="PackedScene" uid="uid://c7efonthk4mum" path="res://Scenes/UI/Stats&UpgradesArea.tscn" id="3_pp4qn"]
 
 [node name="MainLevel" type="Control" unique_id=1736181297]
 layout_mode = 3
@@ -57,9 +30,6 @@ mouse_filter = 2
 [node name="GameArea" parent="UI/GameWrapper" unique_id=1892684322 instance=ExtResource("1_jhkjf")]
 layout_mode = 2
 
-[node name="EnemyShip" parent="UI/GameWrapper/GameArea" unique_id=1356366172 instance=ExtResource("2_pp4qn")]
-position = Vector2(55, 148)
-
 [node name="RightUI" type="VBoxContainer" parent="UI" unique_id=1651574433]
 layout_mode = 2
 size_flags_horizontal = 3
@@ -82,10 +52,3 @@ mouse_filter = 2
 
 [node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" unique_id=1335361586 instance=ExtResource("3_pp4qn")]
 layout_mode = 2
-mouse_filter = 2
-
-[node name="Nave" type="Node2D" parent="." unique_id=1243897528]
-modulate = Color(0.32658824, 0.4343518, 0.33548272, 1)
-top_level = true
-position = Vector2(68, 31)
-script = SubResource("GDScript_pp4qn")

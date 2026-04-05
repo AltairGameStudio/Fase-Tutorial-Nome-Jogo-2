@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://ltndmly4es11"]
+
+[ext_resource type="PackedScene" uid="uid://r6xgni7bsbpx" path="res://Scenes/Entities/Aliens/AlienBase.tscn" id="1_mkgim"]
+[ext_resource type="Script" uid="uid://b36r3s4j4780s" path="res://Scripts/Entities/Aliens/AlienAtirador.gd" id="2_urnmh"]
+[ext_resource type="Texture2D" uid="uid://dveccclitusxl" path="res://Assets/Sprites/Aliens/alien1.png" id="3_jlk45"]
+[ext_resource type="PackedScene" uid="uid://uw16kcmjh7mq" path="res://Scenes/Entities/BulletAlien.tscn" id="3_urnmh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sovk"]
+
+[node name="Alien1" unique_id=1130200876 instance=ExtResource("1_mkgim")]
+script = ExtResource("2_urnmh")
+bullet_scene = ExtResource("3_urnmh")
+
+[node name="Alien1" type="Sprite2D" parent="." index="0" unique_id=1300768105]
+texture = ExtResource("3_jlk45")
+
+[node name="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(933336974) index="0" unique_id=612958574]
+shape = SubResource("RectangleShape2D_4sovk")

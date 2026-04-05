@@ -1,0 +1,249 @@
+[gd_scene format=3 uid="uid://c7efonthk4mum"]
+
+[ext_resource type="Texture2D" uid="uid://ctwd3wetay0em" path="res://Assets/Sprites/Background/stats_upgrades_background.png" id="1_rfc8p"]
+[ext_resource type="Script" uid="uid://dbq0xcitd0r2m" path="res://Scripts/UI/StatusBar.gd" id="2_2s3jd"]
+[ext_resource type="FontFile" uid="uid://bgmhsnllxsbuk" path="res://Assets/Fonts/ui_font_pixelated.ttf" id="2_6kurd"]
+[ext_resource type="Texture2D" uid="uid://nhvuxmtfd4n8" path="res://Assets/Sprites/UI/inventory_slot_black.png" id="2_gj5b4"]
+[ext_resource type="PackedScene" uid="uid://dpsvu4jj0feg6" path="res://Scenes/UI/Upgrades/LifePotion.tscn" id="3_n7gu6"]
+[ext_resource type="PackedScene" uid="uid://be7vh5kmgnpag" path="res://Scenes/UI/Upgrades/BubbleShield.tscn" id="4_6kurd"]
+[ext_resource type="Script" uid="uid://640j7xc6mc3g" path="res://Scripts/UI/Upgrades/LifePotion.gd" id="6_aipnr"]
+[ext_resource type="Script" uid="uid://tt0njdyxwg2h" path="res://Scripts/UI/Upgrades/BubbleShield.gd" id="8_5v2mr"]
+[ext_resource type="PackedScene" uid="uid://bkxwv7ibbvv0y" path="res://Scenes/UI/Upgrades/NewHeart.tscn" id="8_6uq3x"]
+[ext_resource type="PackedScene" uid="uid://f1jswv205heq" path="res://Scenes/UI/Upgrades/Regeneration.tscn" id="9_ri828"]
+[ext_resource type="Script" uid="uid://b4ewcpty1fhb3" path="res://Scripts/UI/Upgrades/NewHeart.gd" id="10_42f3b"]
+[ext_resource type="PackedScene" uid="uid://4r8oriigkdck" path="res://Scenes/UI/Upgrades/Reload.tscn" id="10_djpyv"]
+[ext_resource type="PackedScene" uid="uid://bloh2cnld4bmn" path="res://Scenes/UI/Upgrades/Strenght.tscn" id="11_vlaby"]
+[ext_resource type="PackedScene" uid="uid://bew31cen70a8k" path="res://Scenes/UI/Upgrades/Thorns.tscn" id="12_032wy"]
+[ext_resource type="Script" uid="uid://cncajikq06a3g" path="res://Scripts/UI/Upgrades/Regeneration.gd" id="12_md4xd"]
+[ext_resource type="PackedScene" uid="uid://b0tlm42tu2vpr" path="res://Scenes/UI/Upgrades/ExplosiveDeath.tscn" id="13_scaq0"]
+[ext_resource type="PackedScene" uid="uid://c2dkk2nu5br6w" path="res://Scenes/UI/Upgrades/Medusa.tscn" id="14_oh834"]
+[ext_resource type="Script" uid="uid://cv25ewht6k6jc" path="res://Scripts/UI/Upgrades/Reload.gd" id="14_x1x41"]
+[ext_resource type="Script" uid="uid://c6f4e86uqtciq" path="res://Scripts/UI/Upgrades/Strenght.gd" id="16_xydnl"]
+[ext_resource type="Script" uid="uid://dcxrohjgs45bq" path="res://Scripts/UI/Upgrades/Thorns.gd" id="18_bwana"]
+[ext_resource type="Script" uid="uid://bdir88urp47d6" path="res://Scripts/UI/Upgrades/ExplosiveDeath.gd" id="20_kxvj7"]
+[ext_resource type="Script" uid="uid://chiebr8vc71jl" path="res://Scripts/UI/Upgrades/Medusa.gd" id="22_8vct6"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_2s3jd"]
+font = ExtResource("2_6kurd")
+font_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_6kurd"]
+font = ExtResource("2_6kurd")
+font_size = 6
+
+[sub_resource type="LabelSettings" id="LabelSettings_aipnr"]
+font = ExtResource("2_6kurd")
+font_size = 6
+
+[node name="StatsAndUpgradesArea" type="Control" unique_id=2040743486]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 152.0
+offset_bottom = 136.0
+mouse_filter = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1358632685]
+modulate = Color(0.632145, 0, 0.158507, 1)
+self_modulate = Color(0.581126, 1, 0.908312, 1)
+light_mask = 5
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_rfc8p")
+flip_v = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="TextureRect" unique_id=894621627]
+layout_mode = 0
+offset_left = 3.0
+offset_right = 149.0
+offset_bottom = 30.0
+script = ExtResource("2_2s3jd")
+
+[node name="EnergyLabel" type="Label" parent="TextureRect/HBoxContainer" unique_id=1003702917]
+layout_mode = 2
+text = "Energy:10"
+label_settings = SubResource("LabelSettings_2s3jd")
+autowrap_trim_flags = 128
+
+[node name="RoundLabel" type="Label" parent="TextureRect/HBoxContainer" unique_id=54539789]
+layout_mode = 2
+text = "Round:1"
+label_settings = SubResource("LabelSettings_6kurd")
+
+[node name="TimeLabel" type="Label" parent="TextureRect/HBoxContainer" unique_id=1981944639]
+layout_mode = 2
+text = "Time:0s"
+label_settings = SubResource("LabelSettings_aipnr")
+
+[node name="SlotsContainer" type="GridContainer" parent="TextureRect" unique_id=31869341]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 30.0
+offset_right = 144.0
+offset_bottom = 110.0
+mouse_filter = 2
+columns = 5
+
+[node name="Slot" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=479616949]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Life Potion" parent="TextureRect/SlotsContainer/Slot" unique_id=939824228 instance=ExtResource("3_n7gu6")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 12.0
+script = ExtResource("6_aipnr")
+
+[node name="Slot2" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1755745652]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="BubbleShield" parent="TextureRect/SlotsContainer/Slot2" unique_id=251461460 instance=ExtResource("4_6kurd")]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 12.0
+offset_right = 12.0
+offset_bottom = 12.0
+script = ExtResource("8_5v2mr")
+
+[node name="Slot3" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1579106846]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="New Heart" parent="TextureRect/SlotsContainer/Slot3" unique_id=1127089514 instance=ExtResource("8_6uq3x")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("10_42f3b")
+
+[node name="Slot4" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1292799231]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Regen" parent="TextureRect/SlotsContainer/Slot4" unique_id=1802250224 instance=ExtResource("9_ri828")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("12_md4xd")
+
+[node name="Slot5" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=185756409]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Reload" parent="TextureRect/SlotsContainer/Slot5" unique_id=1665789760 instance=ExtResource("10_djpyv")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("14_x1x41")
+
+[node name="Slot6" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=420916182]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Strenght" parent="TextureRect/SlotsContainer/Slot6" unique_id=957819994 instance=ExtResource("11_vlaby")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("16_xydnl")
+
+[node name="Slot7" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=174889754]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Thorns" parent="TextureRect/SlotsContainer/Slot7" unique_id=1996736790 instance=ExtResource("12_032wy")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource("18_bwana")
+
+[node name="Slot8" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=336111974]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="ExplosiveDeath" parent="TextureRect/SlotsContainer/Slot8" unique_id=1289189218 instance=ExtResource("13_scaq0")]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.45800003
+anchor_right = 0.5
+anchor_bottom = 0.45800003
+offset_top = 1.0079994
+offset_bottom = 1.0079994
+script = ExtResource("20_kxvj7")
+
+[node name="Slot9" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=121531087]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")
+
+[node name="Medusa" parent="TextureRect/SlotsContainer/Slot9" unique_id=1004706130 instance=ExtResource("14_oh834")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+script = ExtResource("22_8vct6")
+
+[node name="Slot10" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1127836040]
+custom_minimum_size = Vector2(24, 24)
+layout_mode = 2
+mouse_filter = 2
+button_mask = 0
+texture_normal = ExtResource("2_gj5b4")

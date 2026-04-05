@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://bloh2cnld4bmn"]
+
+[ext_resource type="PackedScene" uid="uid://dpsvu4jj0feg6" path="res://Scenes/UI/Upgrades/LifePotion.tscn" id="1_slv44"]
+[ext_resource type="Texture2D" uid="uid://dpeg6fy2st0mr" path="res://Assets/Sprites/Upgrades/Strenght.png" id="2_7oyd0"]
+
+[node name="Upgrade1" unique_id=939824228 instance=ExtResource("1_slv44")]
+
+[node name="Heart" parent="." index="0" unique_id=226125794]
+position = Vector2(0, 0)
+texture = ExtResource("2_7oyd0")
