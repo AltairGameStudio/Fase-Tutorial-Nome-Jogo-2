@@ -13,5 +13,22 @@ collision_mask = 0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=612958574]
 
+[node name="PanelContainer" type="PanelContainer" parent="Area2D" unique_id=11039651]
+visible = false
+offset_right = 47.0
+offset_bottom = 11.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/PanelContainer" unique_id=1480664064]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="Area2D/PanelContainer/MarginContainer" unique_id=54086955]
+z_index = 5
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 3
+theme_override_font_sizes/bold_font_size = 5
+theme_override_font_sizes/italics_font_size = 3
+fit_content = true
+scroll_active = false
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]
