@@ -7,6 +7,7 @@ func _ready() -> void:
 	attack_cooldown = 1.5
 	damage = 10
 	super._ready()
+	label.text = "Alien atirador\nCusto: 2\nHabilidade: Atira para frente\nVida: %d\nDano: %d\nCooldown: %ds" % [max_health, damage, attack_cooldown]
 
 func attack() -> void:
 	if bullet_scene:
