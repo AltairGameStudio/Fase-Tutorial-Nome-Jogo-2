@@ -1,10 +1,19 @@
-[gd_scene format=3 uid="uid://c2dkk2nu5br6w"]
+[gd_scene format=3 uid="uid://cd0jiam76i2i6"]
 
-[ext_resource type="PackedScene" uid="uid://dpsvu4jj0feg6" path="res://Scenes/UI/Upgrades/LifePotion.tscn" id="1_kwjqm"]
+[ext_resource type="PackedScene" uid="uid://dd55aeq3usc2w" path="res://Scenes/UI/Upgrades/UpgradeBase.tscn" id="1_kwjqm"]
 [ext_resource type="Texture2D" uid="uid://cg3cvmdenhtaj" path="res://Assets/Sprites/Upgrades/Medusa.png" id="2_opf3x"]
+[ext_resource type="Script" uid="uid://chiebr8vc71jl" path="res://Scripts/UI/Upgrades/Medusa.gd" id="2_snkgb"]
 
-[node name="Upgrade1" unique_id=939824228 instance=ExtResource("1_kwjqm")]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0mi8y"]
+size = Vector2(16, 12)
 
-[node name="Heart" parent="." index="0" unique_id=226125794]
+[node name="UpgradeBase" unique_id=939824228 instance=ExtResource("1_kwjqm")]
+script = ExtResource("2_snkgb")
+
+[node name="Medusa" type="Sprite2D" parent="." index="0" unique_id=1137146894]
+position = Vector2(-1.1920929e-07, 0)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("2_opf3x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1359505252) index="0" unique_id=2140420429]
+shape = SubResource("RectangleShape2D_0mi8y")
