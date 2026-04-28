@@ -130,13 +130,13 @@ func can_receive_upgrade(upgrade_num: int) -> bool:
 			print("[DEBUG] ALIEN JÁ ESTÁ IVULNERÁVEL.")
 	elif (upgrade_num in [5, 6, 9]):
 		if (type in [1,4]):
-			if (upgrade_num == 9 and act_upgrades[upgrade_num] == 1):
+			if (upgrade_num == 9 and act_upgrades[upgrade_num-1] == 1):
 				return false
 			return true
 		else:
 			print("[DEBUG] ALIEN NÃO ACEITA ESTE UPGRADE.")
 	elif (upgrade_num in [7, 8]):
-		if ((act_upgrades[upgrade_num] == 0)):
+		if ((act_upgrades[upgrade_num-1] == 0)):
 			return true
 		else:
 			print("[DEBUG] ALIEN JÁ POSSUÍ ESTE UPGRADE.")
