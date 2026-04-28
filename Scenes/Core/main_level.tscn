@@ -52,3 +52,16 @@ mouse_filter = 2
 
 [node name="StatsAndUpgradesArea" parent="UI/RightUI/StatsAndUpgrades" unique_id=1335361586 instance=ExtResource("3_pp4qn")]
 layout_mode = 2
+
+[node name="Panel" type="Panel" parent="." unique_id=242836327]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Panel" unique_id=717653403]
+z_index = 100
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 6

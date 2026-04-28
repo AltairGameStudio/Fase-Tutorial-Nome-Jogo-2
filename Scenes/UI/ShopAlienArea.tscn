@@ -51,6 +51,7 @@ button_mask = 0
 texture_normal = ExtResource("2_r3bon")
 
 [node name="Alien1" parent="SlotsContainer/Slot" unique_id=1130200876 instance=ExtResource("5_0hbgf")]
+z_index = 10
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5

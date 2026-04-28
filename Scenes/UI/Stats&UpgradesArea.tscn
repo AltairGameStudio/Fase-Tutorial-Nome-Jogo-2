@@ -16,12 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://bew31cen70a8k" path="res://Scenes/UI/Upgrades/Thorns.tscn" id="12_032wy"]
 [ext_resource type="Script" uid="uid://cncajikq06a3g" path="res://Scripts/UI/Upgrades/Regeneration.gd" id="12_md4xd"]
 [ext_resource type="PackedScene" uid="uid://b0tlm42tu2vpr" path="res://Scenes/UI/Upgrades/ExplosiveDeath.tscn" id="13_scaq0"]
-[ext_resource type="PackedScene" uid="uid://c2dkk2nu5br6w" path="res://Scenes/UI/Upgrades/Medusa.tscn" id="14_oh834"]
+[ext_resource type="PackedScene" uid="uid://cd0jiam76i2i6" path="res://Scenes/UI/Upgrades/Medusa.tscn" id="14_oh834"]
 [ext_resource type="Script" uid="uid://cv25ewht6k6jc" path="res://Scripts/UI/Upgrades/Reload.gd" id="14_x1x41"]
 [ext_resource type="Script" uid="uid://c6f4e86uqtciq" path="res://Scripts/UI/Upgrades/Strenght.gd" id="16_xydnl"]
 [ext_resource type="Script" uid="uid://dcxrohjgs45bq" path="res://Scripts/UI/Upgrades/Thorns.gd" id="18_bwana"]
 [ext_resource type="Script" uid="uid://bdir88urp47d6" path="res://Scripts/UI/Upgrades/ExplosiveDeath.gd" id="20_kxvj7"]
-[ext_resource type="Script" uid="uid://chiebr8vc71jl" path="res://Scripts/UI/Upgrades/Medusa.gd" id="22_8vct6"]
+[ext_resource type="PackedScene" uid="uid://cc5ysn71m8fms" path="res://Scenes/UI/Upgrades/KillAlien.tscn" id="23_42f3b"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_2s3jd"]
 font = ExtResource("2_6kurd")
@@ -43,7 +43,6 @@ offset_bottom = 136.0
 mouse_filter = 2
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1358632685]
-modulate = Color(0.632145, 0, 0.158507, 1)
 self_modulate = Color(0.581126, 1, 0.908312, 1)
 light_mask = 5
 texture_filter = 1
@@ -97,11 +96,14 @@ button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
 [node name="Life Potion" parent="TextureRect/SlotsContainer/Slot" unique_id=939824228 instance=ExtResource("3_n7gu6")]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 12.0
-offset_bottom = 12.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("6_aipnr")
 
 [node name="Slot2" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1755745652]
@@ -112,11 +114,12 @@ button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
 [node name="BubbleShield" parent="TextureRect/SlotsContainer/Slot2" unique_id=251461460 instance=ExtResource("4_6kurd")]
-layout_mode = 0
-offset_left = 12.0
-offset_top = 12.0
-offset_right = 12.0
-offset_bottom = 12.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
 script = ExtResource("8_5v2mr")
 
 [node name="Slot3" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1579106846]
@@ -205,6 +208,8 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
 script = ExtResource("18_bwana")
 
 [node name="Slot8" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=336111974]
@@ -218,11 +223,9 @@ texture_normal = ExtResource("2_gj5b4")
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
-anchor_top = 0.45800003
+anchor_top = 0.5
 anchor_right = 0.5
-anchor_bottom = 0.45800003
-offset_top = 1.0079994
-offset_bottom = 1.0079994
+anchor_bottom = 0.5
 script = ExtResource("20_kxvj7")
 
 [node name="Slot9" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=121531087]
@@ -232,14 +235,13 @@ mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
 
-[node name="Medusa" parent="TextureRect/SlotsContainer/Slot9" unique_id=1004706130 instance=ExtResource("14_oh834")]
+[node name="UpgradeBase" parent="TextureRect/SlotsContainer/Slot9" unique_id=1199054987 instance=ExtResource("14_oh834")]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = -1
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-script = ExtResource("22_8vct6")
 
 [node name="Slot10" type="TextureButton" parent="TextureRect/SlotsContainer" unique_id=1127836040]
 custom_minimum_size = Vector2(24, 24)
@@ -247,3 +249,13 @@ layout_mode = 2
 mouse_filter = 2
 button_mask = 0
 texture_normal = ExtResource("2_gj5b4")
+
+[node name="KillAlien" parent="TextureRect/SlotsContainer/Slot10" unique_id=1847994926 instance=ExtResource("23_42f3b")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2

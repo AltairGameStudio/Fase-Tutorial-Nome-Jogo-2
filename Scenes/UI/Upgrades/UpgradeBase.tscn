@@ -9,5 +9,23 @@ script = ExtResource("1_fk24t")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1359505252]
 
+[node name="PanelContainer" type="PanelContainer" parent="Area2D" unique_id=200133642]
+visible = false
+offset_right = 47.0
+offset_bottom = 11.0
+
+[node name="MarginContainer" type="MarginContainer" parent="Area2D/PanelContainer" unique_id=1761416517]
+layout_mode = 2
+
+[node name="Label" type="RichTextLabel" parent="Area2D/PanelContainer/MarginContainer" unique_id=1877901793]
+z_index = 10
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 3
+theme_override_font_sizes/bold_font_size = 5
+theme_override_font_sizes/italics_font_size = 3
+text = " "
+fit_content = true
+scroll_active = false
+
 [connection signal="mouse_entered" from="Area2D" to="." method="_mouse_entered"]
 [connection signal="mouse_exited" from="Area2D" to="." method="_mouse_exited"]
