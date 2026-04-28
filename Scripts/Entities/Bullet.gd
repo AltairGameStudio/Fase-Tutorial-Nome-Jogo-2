@@ -8,7 +8,7 @@ var piercing: bool = false # Define se a bala transpassa
 func _ready() -> void:
 	self.area_entered.connect(_on_area_entered)
 	self.body_entered.connect(_on_body_entered)
-
+	
 func _physics_process(delta: float) -> void:
 	position += direction * speed * delta
 
@@ -16,11 +16,13 @@ func _physics_process(delta: float) -> void:
 func _on_area_entered(area: Area2D) -> void:
 	var pai = area.get_parent()
 	if pai != null and pai.has_method("take_damage"):
-		pai.take_damage(damage)
-		
-		# Só destrói a bala se não for perfurante
-		if not piercing:
-			queue_free()
+		if (pai is AlienBase and pai.on_store):
+			pass
+		else:
+			pai.take_damage(damage)
+			# Só destrói a bala se não for perfurante
+			if not piercing:
+				queue_free()
 
 ## Para colisões com a Nave Inimiga
 func _on_body_entered(body: Node2D) -> void:
@@ -29,3 +31,7 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		if not piercing:
 			queue_free()
+
+## Para excluir a bala quando ela sair da tela
+func _exited_screen() -> void:
+	queue_free()
