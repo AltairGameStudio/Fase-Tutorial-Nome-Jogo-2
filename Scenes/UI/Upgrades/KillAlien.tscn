@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://cc5ysn71m8fms"]
+
+[ext_resource type="PackedScene" uid="uid://dd55aeq3usc2w" path="res://Scenes/UI/Upgrades/UpgradeBase.tscn" id="1_xt085"]
+[ext_resource type="Texture2D" uid="uid://cjwnbhw027pda" path="res://Assets/Sprites/Upgrades/Kill.png" id="2_1ennu"]
+[ext_resource type="Script" uid="uid://cncc4asd1sjd" path="res://Scripts/UI/Upgrades/Kill.gd" id="2_v2hjj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2hjj"]
+size = Vector2(13.5, 14)
+
+[node name="KillAlien" unique_id=939824228 instance=ExtResource("1_xt085")]
+script = ExtResource("2_v2hjj")
+
+[node name="Kill" type="Sprite2D" parent="." index="0" unique_id=2119274271]
+position = Vector2(-5.9604645e-08, -8.34465e-07)
+scale = Vector2(0.09714285, 0.08571428)
+texture = ExtResource("2_1ennu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" parent_id_path=PackedInt32Array(1359505252) index="0" unique_id=265098600]
+shape = SubResource("RectangleShape2D_v2hjj")
