@@ -8,6 +8,8 @@ func _ready() -> void:
 	max_health = 40
 	current_health = max_health
 	movement_speed = 80.0 
+	add_to_group("Enemies")
+
 
 func _process(_delta: float) -> void:
 	await get_tree().create_timer(initial_shoot_delay + randf()).timeout

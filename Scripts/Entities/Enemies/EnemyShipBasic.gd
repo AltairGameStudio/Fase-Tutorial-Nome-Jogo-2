@@ -3,6 +3,9 @@ extends EnemyBase
 @export var bullet_scene = preload("res://Scenes/Entities/BulletEnemy.tscn")
 @export var shoot_cooldown: float = 2.0
 
+func _ready() -> void:
+	add_to_group("Enemies")
+
 func _process(_delta: float) -> void:
 	if GameManager.current_phase != GameManager.GamePhase.COMBAT: 
 		return

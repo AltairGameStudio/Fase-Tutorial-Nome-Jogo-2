@@ -9,6 +9,8 @@ func _ready() -> void:
 	current_health = max_health
 	movement_speed = 10.0 # mais lenta
 	bullet_damage = 100 # Dano alto
+	add_to_group("Enemies")
+
 
 func _process(_delta: float) -> void:
 	if GameManager.current_phase != GameManager.GamePhase.COMBAT: 
