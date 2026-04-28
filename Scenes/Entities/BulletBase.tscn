@@ -10,15 +10,19 @@ size = Vector2(4, 4)
 script = ExtResource("1_k5b1m")
 
 [node name="Sprite2D" type="TextureRect" parent="." unique_id=1264451042]
-offset_left = -1.0
-offset_top = -1.0
-offset_right = 399999.03
-offset_bottom = 399999.03
+offset_left = -2.0
+offset_top = -2.0
+offset_right = 399998.03
+offset_bottom = 399998.03
 scale = Vector2(1e-05, 1e-05)
 size_flags_horizontal = 4
 size_flags_vertical = 4
 texture = ExtResource("2_1fahf")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=20962248]
-position = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_k5b1m")
+
+[node name="VisibleOnScreenEnabler2D" type="VisibleOnScreenEnabler2D" parent="." unique_id=1667598304]
+rect = Rect2(-2, -2, 4, 4)
+
+[connection signal="screen_exited" from="VisibleOnScreenEnabler2D" to="." method="_exited_screen"]

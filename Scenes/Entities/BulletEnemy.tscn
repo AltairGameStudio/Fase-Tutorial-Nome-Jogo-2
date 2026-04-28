@@ -3,9 +3,9 @@
 [ext_resource type="PackedScene" uid="uid://c3l3un2bmhlio" path="res://Scenes/Entities/BulletBase.tscn" id="1_fbs8j"]
 
 [node name="EnemyBullet" unique_id=254723802 instance=ExtResource("1_fbs8j")]
-position = Vector2(-1, -1)
 collision_layer = 4
 collision_mask = 2
 
 [node name="Sprite2D" parent="." index="0" unique_id=1264451042]
+self_modulate = Color(0, 0.38059267, 1.6852883, 1)
 metadata/_edit_use_anchors_ = true
